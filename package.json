@@ -1,0 +1,58 @@
+{
+  "name": "DITO",
+  "description": "DITO defi swap",
+  "version": "0.0.1",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "license": "MIT",
+  "scripts": {
+    "truffle-compile": "./node_modules/.bin/truffle compile",
+    "truffle-migrate": "./node_modules/.bin/truffle migrate --reset;",
+    "truffle-migrate-local": "./node_modules/.bin/truffle migrate --reset --network development",
+    "truffle-migrate-ropsten": "./node_modules/.bin/truffle migrate --reset --network ropsten",
+    "truffle-migrate-mainnet": "./node_modules/.bin/truffle migrate --reset --network mainnet",
+    "truffle-migrate-bscMainnet": "./node_modules/.bin/truffle migrate --reset --network bscMainnet",
+    "truffle-migrate-bscTestnet": "./node_modules/.bin/truffle migrate --reset --network bscTestnet",
+    "truffle-verify1": "./node_modules/.bin/truffle run verify MasterChef@0xA960c143Fe2A9Af9275B498b92ed874110514F02 --network bscTestnet",
+    "truffle-verify2": "./node_modules/.bin/truffle run verify TBCToken@0x546f0AB1b5Ac3b32fcaA0cE435F9FABcEfd2c83a --network bscTestnet",
+    "truffle-networks": "./node_modules/.bin/truffle netwokrs",
+    "flatten": "./node_modules/.bin/truffle-flattener ./contracts/**/*.sol"
+  },
+  "dependencies": {
+    "truffle": "5.1.42"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^3.1.0",
+    "@openzeppelin/contracts-upgradeable": "^3.4.0",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "@openzeppelin/truffle-upgrades": "^1.5.0",
+    "@truffle/hdwallet-provider": "1.0.43",
+    "@types/chai": "4.2.6",
+    "@types/mocha": "5.2.7",
+    "chai": "4.2.0",
+    "dotenv": "8.2.0",
+    "ethereum-waffle": "2.4.1",
+    "ethereumjs-util": "6.2.0",
+    "git-hooks": "1.1.10",
+    "mocha": "6.2.2",
+    "prettier": "1.19.1",
+    "rimraf": "3.0.0",
+    "solc": "0.6.12",
+    "truffle-contract-size": "^2.0.1",
+    "truffle-plugin-verify": "0.5.11",
+    "ts-node": "8.5.4",
+    "typescript": "3.7.3",
+    "web3": "^1.3.0"
+  }
+}
